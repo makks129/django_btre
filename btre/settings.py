@@ -149,3 +149,10 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'strelnikov.maxim@gmail.com'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
+
+# Import local settings (for server)
+# See: https://gist.github.com/bradtraversy/cfa565b879ff1458dba08f423cb01d71#local-settings-setup
+try:
+    from .local_settings import *
+except ImportError:
+    pass
